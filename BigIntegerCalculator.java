@@ -10,32 +10,35 @@ public class BigIntegerCalculator {
                 BigInteger big = new BigInteger(
                                 "2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000");
                 System.out.println(big);
-                System.out.println();
 
                 // + 1
                 big = big.add(BigInteger.ONE);
                 System.out.println(big);
-                System.out.println();
 
                 // - 3
                 big = big.subtract(BigInteger.valueOf(3));
                 System.out.println(big);
-                System.out.println();
 
                 // * 2
                 big = big.multiply(BigInteger.valueOf(2));
                 System.out.println(big);
-                System.out.println();
 
                 // / 2 : It returns a Integer.
                 big = big.divide(BigInteger.valueOf(2));
                 System.out.println(big);
-                System.out.println();
 
                 // * 0
                 big = big.multiply(BigInteger.ZERO);
                 System.out.println(big);
-                System.out.println();
 
+                int x;
+                x = big.compareTo(big);
+                System.out.println(x);
+                
+                x = big.compareTo(BigInteger.valueOf(-1));
+                System.out.println(x);
+                
+                x = big.compareTo(big.add(BigInteger.valueOf(1)));
+                System.out.println(x);                
         }
 }
